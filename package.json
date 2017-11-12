@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "basic react setup",
   "main": "main.js",
+  "homepage": "https://ksantiago.github.io/my-react-app",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +21,8 @@
     "react-dom": "^16.1.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }
